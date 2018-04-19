@@ -67,11 +67,6 @@
             //$object = $response->getGraphObject();
 
             // For every event scrape details...
-            echo '<p> Dump </p><p> ' . get_class($graphEdge); //Debugging Line
-            echo '<p>' . sizeof($graphEdge) . '</p>'; //Debugging Line
-            echo '<p>' . var_dump($response->getHeaders()) . '</p>'; //Debugging Line
-            echo '<p>' . var_dump($response->getAccessToken()) . '</p>'; //Debugging Line
-
             //echo '<p> Dump </p><p> ' . var_dump($response->getGraphEdge()) . ' </p>'; // Debugging line
             foreach ($graphEdge as $graphNode) {
                 echo '<p> Graph Node </p>'; // Debugging line
@@ -138,5 +133,4 @@
         }
     }
     $con->close();
-
 ?>
