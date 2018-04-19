@@ -1,0 +1,28 @@
+<div>
+    <p>
+        <button type="button" id="event_scrape_btn"> Update Events list </button><br>
+    <p>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script> $(document).on('click',"#event_scrape_btn",function(){
+                   if (window.XMLHttpRequest) {
+                   // code for IE7+, Firefox, Chrome, Opera, Safari
+                   xmlhttp = new XMLHttpRequest();
+                   } else {
+                   // code for IE6, IE5
+                   xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                   }
+                   xmlhttp.onreadystatechange = function() {
+                   if (this.readyState == 4 && this.status == 200) {
+                   document.getElementById("main1").innerHTML = this.responseText;
+                   console.log("Events updated successfully");
+                   }
+                   };
+                   xmlhttp.open("GET","../php/event_scrape.php",true);
+                   xmlhttp.send();
+                   //showEvents();
+    });
+</script>
+
+<div id="main1">
+</div>

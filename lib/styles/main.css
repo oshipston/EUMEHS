@@ -1,0 +1,378 @@
+body {
+    font: 1em Helvetica, Arial, sans-serif;
+    width: 100%;
+}
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 30px; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0px;
+    left: 0px;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none ! important;
+    font-size: 1.3em;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
+.sidenav .glyphicon{
+    color: white;
+    float: right;
+    font-size: 1.7em;
+}
+
+/* Main body style */
+.mainbody {
+    width: 100%;
+    padding-top: 55px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 30px;
+    -webkit-transition: padding-left 0.2s; /* Safari */
+    transition: padding-left 0.2s;
+    position: relative;
+    overflow: auto;
+    z-index: 0;
+}
+
+
+/* Image banner for articles and UofE About */
+.imgBanner{
+    padding-right: 0px ! important;
+    padding-left: 0px ! important;
+    width:100%! important;
+    margin-left: 0px ! important;
+}
+
+/* Force no margin */
+.no-margin{
+    margin-left: 0px ! important;
+    margin-right: 0px ! important;
+    margin-bottom: 0px ! important;
+    margin-top: 0px ! important;
+}
+/* Force no margin */
+.no-padding{
+    padding-left: 0px ! important;
+    padding-right: 0px ! important;
+}
+
+/* Committee image style */
+.commImg {
+    width: auto;
+    max-height: 200px;
+    vertical-align: bottom;
+    margin-right: 10px;
+    shape-image-threshold:0.9;
+    shape-margin:20px;
+}
+
+/* Committee bio container style*/
+.commBio {
+    margin-top: 0px;
+    width: 100%;
+    color: rgb(50,50,50);
+}
+
+/* Committee bio style*/
+.bio{
+    margin-top: 0px;
+    color: rgb(100,100,100);
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+/* Article style */
+
+.ArticleText p{
+    font-size: 1.3em;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: justify;
+    width:80%;
+    margin:auto;
+}
+
+/* About the University style */
+
+.UofEText p{
+    font-size: 1.3em;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: justify;
+}
+
+/* About the University image style */
+.UofEImg{
+    max-height: 200px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Event Feed stylings */
+.event_feedbox {
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+}
+.event_feedbox_header {
+    background-color: #07203F;
+    padding: 8px 10px 8px 10px;
+    line-height: 1.3em;
+    -webkit-transition: all 0.2s; /* Safari */
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.event_feedbox_header:hover{
+    background-color: rgb(0,80,114);
+}
+.event_feedbox_header .glyphicon{
+    color: white;
+    float: right;
+    font-size: 1.7em;
+}
+.event_feedbox_header a:hover{
+    text-decoration: none;
+}
+.past{
+    background-color: rgb(30,30,30);
+}
+.featured{
+    background-color: rgb(141,116,74);
+    box-shadow: 5px 5px 5px #888888;
+}
+.featured:hover{
+    background-color: rgb(211,181,116);
+}
+
+.event_feedbox_header #title{
+    font-size: 1.3em;
+    color: rgb(255,255,255);
+}
+.event_feedbox_header #time_details{
+    width: 100%;
+    font-size: 1em;
+    color: rgb(220,220,220);
+}
+.event_text{
+    background-color: white;
+    padding: 8px 10px 8px 10px;
+    border-style: solid;
+    border-width: 0px 2px 2px 2px;
+    border-color: rgb(0,80,114);
+    font-size: 1em;
+    line-height: 1.2em;
+}
+
+.featured_event_text{
+    background-color: white;
+    box-shadow: 5px 5px 5px #888888;
+    padding: 8px 10px 8px 10px;
+    border-style: solid;
+    border-width: 0px 2px 2px 2px;
+    border-color: rgb(141,116,74);
+    font-size: 1em;
+    line-height: 1.2em;
+}
+.event_text #description{
+    text-decoration: none;
+    color: #07203F;
+}
+.featured_event_text #description{
+    text-decoration: none;
+    color: #07203F;
+}
+
+.event_details{
+    color: rgb(60,60,60);
+}
+
+.event_details:hover{
+    color: rgb(200,200,200);
+    text-decoration: none;
+}
+
+/* Home Feed Appearance */
+
+.home_feedbox {
+    width: 100%;
+    padding: 15px 0px 15px 0px;
+    -webkit-transition: font-size 0.2s; /* Safari */
+    transition: all 0.2s;
+}
+
+.feed_border {
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-color: ;#07203F;
+    -webkit-transition: font-size border-color box-shadow 0.2s; /* Safari */
+    transition: all 0.2s;
+}
+
+.home_col {
+    padding: 0px ! important;
+}
+
+.stable_home_header {
+    background-color: #07203F;
+    padding: 8px 10px 8px 10px;
+    line-height: 1.3em;
+    -webkit-transition: font-size 0.2s; /* Safari */
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.stable_home_header h2{
+    font-size: 2em;
+    margin:0px;
+    color: white;
+}
+
+.unstable_home_header {
+    background-color: white;
+    padding: 8px 10px 0px 10px;
+    line-height: 1.3em;
+    cursor: pointer;
+    color: #07203F;
+    -webkit-transition: font-size 0.2s; /* Safari */
+    transition: all 0.2s;
+}
+.unstable_home_header h2{
+    font-size: 2em;
+    margin:0px;
+}
+
+.home_feed_text{
+    background-color: white;
+    padding: 8px 10px 8px 10px;
+    font-size: 1em;
+    line-height: 1.2em;
+}
+
+.home_feed_img{
+    cursor: pointer;
+}
+/* Article Feed Appearance */
+
+.article_feedbox {
+    width: 100%;
+    padding: 15px 0px 15px 0px;
+    -webkit-transition: all 0.2s; /* Safari */
+    transition: all 0.2s;
+}
+.article_feed_border {
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-color: rgb(105,160,157);
+    -webkit-transition: font-size 0.2s; /* Safari */
+    transition: all 0.2s;
+}
+
+.article_header {
+    background-color: rgb(105,160,157);
+    padding: 8px 10px 8px 10px;
+    line-height: 1.3em;
+    cursor: pointer;
+    color: #07203F;
+    -webkit-transition: all 0.2s; /* Safari */
+    transition: all 0.2s;
+}
+.article_header h2{
+    font-size: 2em;
+    margin:0px;
+    color: white;
+}
+.article_feed_text{
+    background-color: white;
+    padding: 8px 10px 8px 10px;
+    font-size: 1em;
+    line-height: 1.2em;
+}
+
+/* Declare hover behaviour*/
+.feed_border:hover {
+    box-shadow: 5px 5px 5px #888888;
+    border-color: rgb(0,80,114);
+}
+.feed_border:hover .stable_home_header{
+    background-color: rgb(0,80,114);
+    font-size:1.05em;
+}
+.feed_border:hover .unstable_home_header{
+    color: rgb(0,80,114);
+    font-size: 1.05em;
+}
+
+.article_feed_border:hover {
+    box-shadow: 5px 5px 5px #888888;
+    border-color: rgb(127,174,171);
+}
+.article_feed_border:hover .article_header{
+    background-color: rgb(127,174,171);
+    font-size:1.05em;
+}
+
+/* Soc About appearance */
+.SocText p{
+    text-align:justify;
+    font-size:1.3em;
+    margin-top:15px;
+    margin-bottom:15px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* Footer appearance */
+.main_footer {
+    width: 100%;
+    background-color: rgb(30,30,30);
+    padding-top:15px;
+    padding-bottom:5px;
+    padding-left:30px ! important;
+    position: absolute;
+}
+.main_footer p{
+    line-height: 1.2em;
+    font: 0.7em Helvetica, Arial, sans-serif;
+    color: white;
+    text-decoration: none;
+}
+.main_footer a{
+    color: #ccc;
+    text-decoration: none;
+}
+.footer_img_sponsor {
+    max-height: 70px;
+}
+.footer_img_eumehs {
+    max-height: 40px;
+}
