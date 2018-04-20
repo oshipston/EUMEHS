@@ -30,10 +30,10 @@
     function coverURL($postURL){
       $html = file_get_html($postURL);
       $coverImg = $html->find('.entry-content img')[0];
-      if (is_null($coverImg)){
-        $coverURL = '';
-      } else {
+      if (!is_null($coverImg)) {
         $coverURL = $coverImg->getAttribute('src');
+      } else {
+        $coverURL = '';
       }
       return $coverURL;
     }
@@ -50,7 +50,7 @@
 
     // Download BMJ Blog list by each page
     $pg=1;
-    while ($pg < 2) {
+    while ($pg < 3) {
       echo 'Page = '.$pg.'<br>'; //Debugging Line
       $html = file_get_html('http://blogs.bmj.com/medical-humanities/category/book-reviews/page/'.$pg.'/');
       // For each post..
@@ -79,7 +79,7 @@
             // If not ASSUME book title is the same as the article...
             $postDat['BookTitle'] = $postDat['Title'];
           }
-          echo $postDat['BookTitle'].'<br>';
+          echo $postDat['CoverURL'].'<br>';
         }
         $pg++;
       }
